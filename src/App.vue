@@ -52,8 +52,6 @@
 <script>
 import axios from "axios";
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-
 export default {
   name: "github-search",
   data() {
@@ -66,7 +64,6 @@ export default {
   },
   mounted() {
     this.init();
-    console.log(process.env);
   },
   computed: {
     repoOwnerAndName() {
@@ -101,7 +98,7 @@ export default {
           { query: query },
           {
             headers: {
-              Authorization: `bearer ${GITHUB_TOKEN}`
+              Authorization: `bearer ${process.env.GITHUB_TOKEN}`
             }
           }
         )
