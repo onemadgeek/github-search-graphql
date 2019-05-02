@@ -66,6 +66,7 @@ export default {
   },
   mounted() {
     this.init();
+    console.log(process.env);
   },
   computed: {
     repoOwnerAndName() {
