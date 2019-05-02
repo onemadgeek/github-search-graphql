@@ -52,7 +52,7 @@
 <script>
 import axios from "axios";
 
-const GITHUB_TOKEN = "c3338138b71540372dc0d0cdc8814d29fb2bed46";
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
 export default {
   name: "github-search",
