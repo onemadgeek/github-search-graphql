@@ -2,6 +2,7 @@
 const path = require('path')
 const utils = require('./utils')
 const webpack = require('webpack')
+const Dotenv = require('dotenv-webpack')
 const config = require('../config')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
@@ -28,6 +29,9 @@ const webpackConfig = merge(baseWebpackConfig, {
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
   plugins: [
+		new Dotenv({
+			systemvars: true
+		}),
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env
