@@ -1,6 +1,6 @@
 # github-search
 
-This is an example of a very simple github search Vue.js application.
+This is an example of a very simple github issue search with graphql and Vue.js application.
 
 > 
 
